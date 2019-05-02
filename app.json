@@ -1,0 +1,14 @@
+  "name": "Got bot",
+  "description": "The server side for GotBot.",
+  "image": "heroku/python",
+  "repository": "https://github.com/ThomasPoiree/GotBot",
+  "keywords": ["python", "flask" ],
+  "addons": [ "heroku-postgresql" ],
+  "environments": {
+    "test": {
+      "scripts": {
+        "test": "server.py test"
+      }
+    }
+  }
+}
