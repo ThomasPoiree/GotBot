@@ -15,22 +15,22 @@ api = anapioficeandfire.API()
 
 @app.route("/",methods=['POST']) 
 def index():
-	
+    
 
-	
-	requete = requests.get("https://jmentape.fr/")
-   	page = requete.content
-   	soup = BeautifulSoup(page, “html.parser”)
-   	txt = str(soup.find(“h1")).replace(‘<h1>‘, ‘’).replace(‘</h1>‘, ‘’)
-	res = txt 
-	return jsonify(
+    
+    requete = requests.get("https://jmentape.fr/")
+       page = requete.content
+       soup = BeautifulSoup(page, “html.parser”)
+       txt = str(soup.find(“h1")).replace(‘<h1>‘, ‘’).replace(‘</h1>‘, ‘’)
+    res = txt 
+    return jsonify(
 
-		status=200,
-	    	replies=[{
-	      	'type': 'text',
-	      	'content': res
-	    	}]
-		)
+        status=200,
+            replies=[{
+              'type': 'text',
+              'content': res
+            }]
+        )
 
 
 @app.route('/errors', methods=['POST'])
