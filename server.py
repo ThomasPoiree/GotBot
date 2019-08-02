@@ -18,7 +18,7 @@ def index():
 	
 
 	
-	requete = requests.get(“https://jmentape.fr/“)
+	requete = requests.get("https://jmentape.fr/")
    	page = requete.content
    	soup = BeautifulSoup(page, “html.parser”)
    	txt = str(soup.find(“h1")).replace(‘<h1>‘, ‘’).replace(‘</h1>‘, ‘’)
